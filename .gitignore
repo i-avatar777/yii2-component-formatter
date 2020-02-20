@@ -1,0 +1,15 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+./vendor
+./yii
+.idea
+environments
+update.sh
+updateComposer.sh
+yii
+
+
+./composer.lock
+composer.lock
+
+vendor
