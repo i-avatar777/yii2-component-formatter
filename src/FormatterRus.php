@@ -9,7 +9,6 @@ use yii\i18n\Formatter;
 
 class FormatterRus extends Formatter
 {
-
     public function asDate($value, $format = null)
     {
         if (is_null($format)) {
@@ -39,6 +38,13 @@ class FormatterRus extends Formatter
         }
         if (StringHelper::startsWith($format,'php:')) {
             $format1 = substr($format,4);
+            if (is_string($value)) {
+                if (is_integer($value)) {
+
+                } else {
+                    $value = (int)((new \DateTime($value))->format('U'));
+                }
+            }
             $f1 = DateRus::format($format1, $value);
             $format = 'php:' . $f1;
         }
