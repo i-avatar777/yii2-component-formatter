@@ -21,7 +21,6 @@ class FormatterRus extends Formatter
         }
         if (StringHelper::startsWith($format,'php:')) {
             $format1 = substr($format,4);
-            VarDumper::dump([$format1,$format,$value]);
             if (is_string($value)) {
                 if (is_integer($value)) {
 
