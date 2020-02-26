@@ -11,6 +11,7 @@ class FormatterRus extends Formatter
 {
     public function asDate($value, $format = null)
     {
+        if (is_null($value)) return '';
         if (is_null($format)) {
             $format = $this->dateFormat;
         }
@@ -33,6 +34,7 @@ class FormatterRus extends Formatter
 
     public function asDatetime($value, $format = null)
     {
+        if (is_null($value)) return '';
         if (is_null($format)) {
             $format = $this->datetimeFormat;
         }
