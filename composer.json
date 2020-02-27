@@ -1,6 +1,6 @@
 {
   "name": "i-avatar777/yii2-component-formatter",
-  "version":"0.0.8",
+  "version":"0.0.9",
   "description": "Компонент для форматирования расширяющий стандартный датами в русском календаре",
   "keywords": ["formatter"],
   "type": "project",

@@ -18,8 +18,8 @@ class FormatterRus extends Formatter
         if (StringHelper::startsWith($format,'php:')) {
             $format1 = substr($format,4);
             if (is_string($value)) {
-                if (preg_match('/[0-9-]/', $value)) {
-
+                if (is_numeric($value)) {
+                    // ничего не делаю
                 } else {
                     $value = (int)((new \DateTime($value))->format('U'));
                 }
@@ -41,8 +41,8 @@ class FormatterRus extends Formatter
         if (StringHelper::startsWith($format,'php:')) {
             $format1 = substr($format,4);
             if (is_string($value)) {
-                if (preg_match('/[0-9-]/', $value)) {
-
+                if (is_numeric($value)) {
+                    // ничего не делаю
                 } else {
                     $value = (int)((new \DateTime($value))->format('U'));
                 }
