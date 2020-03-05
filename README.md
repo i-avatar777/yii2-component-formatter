@@ -4,6 +4,8 @@
 
 Пока реализована поддержка, если формат задается в стандарте `php:...`
 
+Форматируется тип `date` и `datetime`.
+
 Соответствует БОСТ 000006-7528 "О задании формата даты и времени в программном коде для русского календаря" http://avr3.ru/doHmJp 
 
 ## Инсталяция
@@ -26,7 +28,8 @@ composer require i-avatar777/yii2-component-formatter
 
 ## Как использовать
 
-Пропиши в конфигурационном файле:
+Пропиши в конфигурационном файле `main.php` или `main-local.php`:
+
 ```php
 return [
     // ...
@@ -67,8 +70,16 @@ return [
 Или прямо в коде
 
 ```php
-$d = \Yii::$app->formatter->asDate(time(), 'php:d.m.b (Y)');
-$dt = \Yii::$app->formatter->asDatetime(time(), 'php:d.m.b (Y) H:i:s');
+echo \Yii::$app->formatter->asDate(time(), 'php:j K b (Y)');
+echo '<br>';
+echo \Yii::$app->formatter->asDatetime(time(), 'php:j k b (Y) H:i:s');
+```
+
+
+Выдаст на экран:
+```
+5 мар 7528 (2020)
+5 марта 7528 (2020) 13:59:00
 ```
 
 ## Ссылки
